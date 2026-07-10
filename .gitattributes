@@ -1,0 +1,10 @@
+# Normalize line endings
+* text=auto eol=crlf
+*.sh text eol=lf
+*.md text
+
+# Binary assets
+*.png binary
+*.ico binary
+*.bin binary
+*.zip binary

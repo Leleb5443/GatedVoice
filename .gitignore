@@ -1,0 +1,20 @@
+# Build output
+bin/
+obj/
+dist/
+publish/
+publish-*/
+*.user
+
+# Whisper models (downloaded on first run; too big to track)
+models/
+*.bin
+
+# Release artifacts
+*.zip
+Flow-win-*/
+
+# Runtime junk
+*.part
+*.log
+.vs/
